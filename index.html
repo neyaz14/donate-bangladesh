@@ -29,7 +29,8 @@
 
                 <div class="flex font-bold gap-1 md:text-xl text-[14px]">
                     <img src="assets/coin.png" alt="">
-                    <p>9800</p>
+            <!-- my current balance . It will be minused  -->
+                    <p id="current-balance">9800</p>
                     <p>BDT</p>
 
                 </div>
@@ -61,7 +62,7 @@
 
                     <div class="flex justify-center items-center font-bold bg-slate-100 p-2  rounded-lg gap-1 max-w-36">
                             <img src="assets/coin.png" alt="">
-                            <p>500</p>
+                            <p id="noakhali-donated-amount">500</p>
                             <p>BDT</p>
                     </div>
 
@@ -75,12 +76,12 @@
                     
                     <!-- inout section -->
                     <div class="form-control">
-                            <input type="text" placeholder="Write Donation Amount" class="input input-bordered" required />
+                            <input id="noakhali-donate-input" type="text" placeholder="Write Donation Amount" class="input input-bordered" required />
                     </div>
                     
                     <!-- Donate button -->
                     <div class="form-control mt-6">
-                        <button class="btn bg-lime-400 font-bold md:text-xl text-[16px]" onclick="my_modal_1.showModal()">
+                        <button  id="noakhali-donate-btn"     class="btn bg-lime-400 font-bold md:text-xl text-[16px]" onclick="my_modal_1.showModal()">
                                     Donate Now
                         </button>
                         <!-- for modal -->
@@ -119,7 +120,7 @@
 
                     <div class="flex justify-center items-center font-bold bg-slate-100 p-2  rounded-lg gap-1 max-w-36">
                             <img src="assets/coin.png" alt="">
-                            <p>800</p>
+                            <p id="feni-donated-amount">800</p>
                             <p>BDT</p>
                     </div>
 
@@ -133,11 +134,11 @@
                     
                     <!-- inout section -->
                     <div class="form-control">
-                            <input type="text" placeholder="Write Donation Amount" class="input input-bordered" required />
+                            <input id="feni-donate-input" type="text" placeholder="Write Donation Amount" class="input input-bordered" required />
                     </div>
                     <!-- Donate button -->
                     <div class="form-control mt-6">
-                        <button class="btn bg-lime-400 font-bold md:text-xl text-[16px]" onclick="my_modal_2.showModal()">
+                        <button id="feni-donate-btn" class="btn bg-lime-400 font-bold md:text-xl text-[16px]" onclick="my_modal_2.showModal()">
                             Donate Now
                         </button>
                 <!-- for modal -->
@@ -175,7 +176,7 @@
                 <!-- money card -->
                     <div class="flex justify-center items-center font-bold bg-slate-100 p-2  rounded-lg gap-1 max-w-36">
                             <img src="assets/coin.png" alt="">
-                            <p>2400</p>
+                            <p id="protest-donated-amount">2400</p>
                             <p>BDT</p>
                     </div>
 
@@ -189,11 +190,11 @@
                     
                     <!-- inout section -->
                     <div class="form-control">
-                            <input type="text" placeholder="Write Donation Amount" class="input input-bordered" required />
+                            <input id="protest-donate-input" type="text" placeholder="Write Donation Amount" class="input input-bordered" required />
                     </div>
                     <!-- Donate button -->
                     <div class="form-control mt-6">
-                        <button class="btn bg-lime-400 font-bold md:text-xl text-[16px]" onclick="my_modal_3.showModal()">
+                        <button id="protest-donate-btn" class="btn bg-lime-400 font-bold md:text-xl text-[16px]" onclick="my_modal_3.showModal()">
                             Donate Now
                         </button>
                 <!-- for modal -->
@@ -223,7 +224,7 @@
     </section>
 
 <!--  -----       History       ----   -->
-    <section class="hidden" id="">
+    <section id="history-section" class="hidden" id="">
 
     </section>
 
@@ -231,5 +232,9 @@
 
     </footer>
     
+
+
+    <script src="commonFunction.js"></script>
+    <script src="donationCalc.js"></script>
 </body>
 </html>
