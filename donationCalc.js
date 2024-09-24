@@ -1,3 +1,7 @@
+document.getElementById('blog-btn').addEventListener('click', function(){
+    window.location.href= 'blog.html';
+})
+
 
 document.getElementById('noakhali-donate-btn')
     .addEventListener('click', function(event){
@@ -7,14 +11,20 @@ document.getElementById('noakhali-donate-btn')
         const inputAmount = getValueById('noakhali-donate-input');
 
         // validation check
-        if(isNaN(inputAmount )){
+        if(isNaN(inputAmount ) || inputAmount<0){
             alert("input correct amount");
+            
+           
+            document.getElementById('my_modal_1').classList.remove('modal');
             document.getElementById('my_modal_1').classList.add('hidden');
+            location.reload();
             return;
         }
         if(currentBalance < inputAmount){
             alert("Invalid Input Amount ");
             document.getElementById('my_modal_1').classList.add('hidden');
+            document.getElementById('my_modal_1').classList.remove('modal');
+            location.reload();
             return;
         }
 
@@ -39,6 +49,10 @@ document.getElementById('noakhali-donate-btn')
     })
 
 
+
+
+
+
     // for feni 
     document.getElementById('feni-donate-btn')
     .addEventListener('click', function(event){
@@ -48,14 +62,18 @@ document.getElementById('noakhali-donate-btn')
         const inputAmount = getValueById('feni-donate-input');
 
         // validation check
-        if(isNaN(inputAmount )){
+        if(isNaN(inputAmount ) || inputAmount<0){
             alert("input correct amount");
-            document.getElementById('my_modal_1').classList.add('hidden');
+            document.getElementById('my_modal_2').classList.remove('modal');
+            document.getElementById('my_modal_2').classList.add('hidden');
+            location.reload();
             return;
         }
         if(currentBalance < inputAmount){
             alert("Invalid Input Amount ");
+            document.getElementById('my_modal_2').classList.remove('modal');
             document.getElementById('my_modal_2').classList.add('hidden');
+            location.reload();
             return;
         }
 
@@ -92,14 +110,18 @@ document.getElementById('noakhali-donate-btn')
         const inputAmount = getValueById('protest-donate-input');
 
         // validation check
-        if(isNaN(inputAmount )){
-            alert("input correct amount");
-            document.getElementById('my_modal_1').classList.add('hidden');
+        if(isNaN(inputAmount ) || inputAmount<0){
+            alert("Invalid Input Amount");
+            document.getElementById('my_modal_3').classList.remove('modal');
+            document.getElementById('my_modal_3').classList.add('hidden');
+            location.reload();
             return;
         }
         if(currentBalance < inputAmount){
             alert("Invalid Input Amount ");
+            document.getElementById('my_modal_3').classList.remove('modal');
             document.getElementById('my_modal_3').classList.add('hidden');
+            location.reload();
             return;
         }
 
