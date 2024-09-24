@@ -13,7 +13,7 @@
 
 </head>
 <body>
-    <header class="">
+    <header class="fixed w-[100%] top-0">
         <nav>
     <!-- nav bar top  -->
             <div class="navbar bg-stone-100 flex md:justify-around justify-between pt-4 pb-10">
@@ -37,9 +37,9 @@
             </div>
 
     <!-- nav bar second -->
-            <div class="flex gap-10 justify-center mt-4">
-                <button class="btn bg-lime-300 font-bold">Donation</button>
-                <button class="btn bg-lime-300 font-bold">History</button>
+            <div class="h-[90px] flex gap-10 justify-center pt-5 backdrop-blur-sm">
+                <button  id="donation-btn"   class="btn bg-lime-400 font-bold">Donation</button>
+                <button  id="history-btn"  class="btn  font-bold">History</button>
               
             </div>
 
@@ -48,7 +48,7 @@
     </header>
 
 
-    <section class="md:w-[85%] mx-auto mt-10">
+    <section id="donate-section"    class="md:w-[85%] mx-auto mt-10 pt-40">
       
     <!-- Noakhali box -->
         <div class="hero-content flex-col lg:flex-row border rounded-lg mb-5">
@@ -224,12 +224,18 @@
     </section>
 
 <!--  -----       History       ----   -->
-    <section id="history-section" class="hidden" id="">
+    <section id="history-section" class="hidden md:max-w[80%] mx-auto mt-10 pt-40">
 
     </section>
 
-    <footer class="h-24 bg-stone-100 mt-10">
+    <!-- <footer class="h-24 bg-stone-100 mt-10">
 
+    </footer> -->
+    <footer id="footer" class="footer bg-neutral text-neutral-content p-10 bottom-0 relative ">
+        <aside>
+         
+        </aside>
+        
     </footer>
     
 
